@@ -71,7 +71,7 @@ function osc_list_orders()
         $list_order[__('Higher price first')] = ['sOrder' => 'i_price', 'iOrderType' => 'desc'];
     }
 
-    return $list_order;
+    return osc_apply_filter("search_page_sort_options", $list_order);
 }
 
 
